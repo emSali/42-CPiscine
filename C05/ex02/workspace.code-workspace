@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../C00"
+		},
+		{
+			"path": "../../C01"
+		},
+		{
+			"path": "../../C02"
+		},
+		{
+			"path": "../../C03"
+		},
+		{
+			"path": "../../C04"
+		},
+		{
+			"path": "../../C06"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"string.h": "c",
+			"unistd.h": "c"
+		}
+	}
+}
