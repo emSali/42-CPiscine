@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 13:54:11 by esali             #+#    #+#             */
-/*   Updated: 2022/02/26 17:25:14 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/02 21:52:44 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@ int	ft_atoi(const char *str);
 void *ft_calloc(size_t count, size_t size);
 char *ft_strdup(const char *s1);
 char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
+char *ft_itoa(int n);
 
 #endif

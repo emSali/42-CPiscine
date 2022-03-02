@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:35:38 by esali             #+#    #+#             */
-/*   Updated: 2022/02/26 17:25:15 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/02 21:49:18 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 int	main (void)
 {	
 	//char str[15] = "   --012c34bbb";
-	char s1[30] = "hey, how are you?";
-	char s2[30] = "hey, how are you?";
-	char s3[30] = " you";
 	//const char str3[8] = "im";
 
 	// char *s1 = "Hello";
@@ -104,4 +101,20 @@ int	main (void)
 	// printf("s2 adress: %p\n", ft_strdup(s2));
 	// printf("ft_strdup adress: %p\n\n", ft_strdup(s2));
 
+	//char s1[30] = "hey, how are you?";
+	//char s2[30] = "hey, how are you?";
+	//char s3[30] = "hey";
+
+	//printf("\n____\nstrjoin: %s\n", ft_strjoin(s1, s3));
+	//printf("substr: %s\n", ft_substr(s1, 1, 3));
+	//printf("strtrim: %s\n", ft_strtrim(s1, s3));
+
+	char *s4 = "hhh";
+	char **split = ft_split(s4, 'h');
+	int i = 0;
+	while (split[i] != NULL)
+	{
+		printf("%s\n", split[i]);
+		i++;
+	}
 }
