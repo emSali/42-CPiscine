@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:35:38 by esali             #+#    #+#             */
-/*   Updated: 2022/03/02 21:49:18 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/04 19:21:40 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,12 +109,24 @@ int	main (void)
 	//printf("substr: %s\n", ft_substr(s1, 1, 3));
 	//printf("strtrim: %s\n", ft_strtrim(s1, s3));
 
-	char *s4 = "hhh";
-	char **split = ft_split(s4, 'h');
-	int i = 0;
-	while (split[i] != NULL)
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
+	// char *s4 = "hhh";
+	// char **split = ft_split(s4, 'h');
+	// int i = 0;
+	// while (split[i] != NULL)
+	// {
+	// 	printf("%s\n", split[i]);
+	// 	i++;
+	// }
+
+	/*  --  FT_ITOA  --  */
+	printf("\nft_itoa: %s\n\n", ft_itoa(12));
+
+	/*  --  FT_STRMAPI --  */
+
+	/*  --  FT_PUTSTR-FD --  */
+	ft_putstr_fd("FT_PUTSTR: Hallo\n", 1);
+	ft_putendl_fd("PUTENDL: Hallo\n", 1);
+	printf("FT_PUTNBR: ");
+	ft_putnbr_fd(12, 1);
+	printf("\n");
 }

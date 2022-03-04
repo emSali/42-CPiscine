@@ -6,34 +6,56 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:52:12 by esali             #+#    #+#             */
-/*   Updated: 2022/03/02 22:57:10 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/04 19:21:39 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	fill(char *re, int n)
+static int	getsize(int nb)
 {
-	if (n < 10)
-		return (n);
-	else
-		re = '0' + n;
-		
+	int	size;
+
+	if (nb < 0)
+		size = 1;
+	while (nb != 0)
+	{
+		nb = nb / 10;
+		size++;
+	}
+	return (size);
 }
 
-char	*ft_itoa(int n)
+static int	makepos(int nb)
+{
+	if (nb < 0)
+		return (-nb);
+	return (nb);
+}
+
+char	*ft_itoa(int nb)
 {
 	char	*re;
-	int		count;
-	int		n2;
+	int		size;
 
-	n2 = n;
-	count = 0;
-	while (n2 > 0)
+	size = getsize(nb);
+	re = (char *) malloc(sizeof(char) * (size + 1));
+	if (re == NULL)
+		return (NULL);
+	re[size] = '\0';
+	size--;
+	if (nb == -2147483648)
+		{
+			re[1] = '0' + 2;
+			nb = -147483648;
+		}
+	if (nb < 0)
+		re[0] = '-';
+	while (nb >= 10 || nb <= -10)
 	{
-		n2 = n2 / 10;
-		count++;
+		re[size--] = '0' + (makepos(nb) % 10);
+		nb = makepos(nb) / 10;
 	}
-	re = (char *) malloc(sizeof(char) * (count + 1));
-
+	re[size] = '0' + nb;
+	return (re);
 }
