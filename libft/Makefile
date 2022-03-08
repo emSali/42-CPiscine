@@ -6,11 +6,11 @@
 #    By: esali <esali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 13:12:29 by esali             #+#    #+#              #
-#    Updated: 2022/03/04 15:24:14 by esali            ###   ########.fr        #
+#    Updated: 2022/03/08 14:45:51 by esali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.c ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
+SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
 			ft_memset.c ft_strchr.c ft_strlcat.c ft_strlcpy.c \
@@ -20,18 +20,13 @@ SRCS	=	main.c ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 			ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c
 OBJS	= ${SRCS:c=o}
-NAME	= libft.a 
+NAME	= libft.a
 CC		= gcc
-CFLAGS	= -Wall -Werror -Wextra -fsanitize=address
+CFLAGS	= -Wall -Werror -Wextra
 RM		= rm -f
-
-.c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 				ar rc ${NAME} ${OBJS}
-				ranlib ${NAME}
-				${CC} -o a.out ${NAME} ${SRCS}
 
 all:		${NAME}
 

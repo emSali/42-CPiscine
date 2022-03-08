@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:35:38 by esali             #+#    #+#             */
-/*   Updated: 2022/03/04 19:21:40 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/08 14:45:53 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,6 @@ int	main (void)
 	/*  --  FT_PUTSTR-FD --  */
 	ft_putstr_fd("FT_PUTSTR: Hallo\n", 1);
 	ft_putendl_fd("PUTENDL: Hallo\n", 1);
-	printf("FT_PUTNBR: ");
-	ft_putnbr_fd(12, 1);
-	printf("\n");
+	ft_putstr_fd("\n\nFT_PUTNBR_F:\n", 1);
+	ft_putnbr_fd(2, 1);
 }

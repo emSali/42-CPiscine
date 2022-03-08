@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 18:41:44 by esali             #+#    #+#             */
-/*   Updated: 2022/03/03 18:47:09 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/08 14:05:41 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-	while(s)
+	int i;
+	
+	i = 0;
+	while(s[i] != 0)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
 }
