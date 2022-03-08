@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:28:40 by esali             #+#    #+#             */
-/*   Updated: 2022/03/08 15:14:30 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/08 18:07:43 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	int		i;
 	char	*dst2;
 	char	*src2;
-	//char	*dst_org;
 
-	//dst_org = ft_strdup(dst);
 	i = something(src, (int) n);
 	src2 = (char *) src;
 	dst2 = (char *) dst;
@@ -35,6 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		dst2[i] = src2[i];
 		i--;
 	}
-	//return (dst_org);
 	return (dst);
 }
