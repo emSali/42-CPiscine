@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 17:59:19 by esali             #+#    #+#             */
-/*   Updated: 2022/02/26 12:52:22 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/15 13:38:04 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)(s + i));
 	while (*s != '\0')
-	{
 		s++;
-	}
 	while (i >= 0)
 	{
-		if (*s == c)
+		if (*s == (unsigned char) c)
 			return ((char *) s);
 		i--;
 		s--;

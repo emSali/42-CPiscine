@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 17:48:20 by esali             #+#    #+#             */
-/*   Updated: 2022/03/03 18:53:28 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/15 18:46:31 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int,char*))
 	int	i;
 
 	i = 0;
-	while (s)
+	while (s[i] != 0)
 	{
-		f(i, s);
-		s++;
-		i++;
+		f(i, &s[i]);
 	}
 }

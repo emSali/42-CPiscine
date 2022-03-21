@@ -6,7 +6,7 @@
 #    By: esali <esali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 13:12:29 by esali             #+#    #+#              #
-#    Updated: 2022/03/08 18:08:12 by esali            ###   ########.fr        #
+#    Updated: 2022/03/15 14:30:15 by esali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,12 @@ CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 RM		= rm -f
 
+.c.o:
+			${CC} ${CGLAGS} -c $< -o ${<:.c=.o}
+
 ${NAME}:	${OBJS}
 				ar rc ${NAME} ${OBJS}
+				ranlib ${NAME}
 
 all:		${NAME}
 
