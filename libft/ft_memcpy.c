@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:53:07 by esali             #+#    #+#             */
-/*   Updated: 2022/02/16 13:11:41 by esali            ###   ########.fr       */
+/*   Updated: 2022/05/30 17:52:34 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const char	*s;
 	int			i;
 
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	d = (char *) dst;
 	s = (char *) src;
 	i = 0;

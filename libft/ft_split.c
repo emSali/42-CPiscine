@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:04:07 by esali             #+#    #+#             */
-/*   Updated: 2022/03/03 12:59:35 by esali            ###   ########.fr       */
+/*   Updated: 2022/05/30 17:55:33 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 				break;
 		}
 		split[i][j] = '\0';
-		printf("i: %i\n", i);
+		//printf("i: %i\n", i);
 		i++;
 	}
 	split[i] = NULL;
