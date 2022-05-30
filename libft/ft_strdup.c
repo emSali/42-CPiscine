@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 14:21:41 by esali             #+#    #+#             */
-/*   Updated: 2022/02/26 17:26:44 by esali            ###   ########.fr       */
+/*   Updated: 2022/05/30 18:55:55 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	len = ft_strlen(s1);
-	help = (char *) malloc(len * sizeof(char));
+	help = (char *) malloc((len + 1) * sizeof(char));
 	if (help == NULL)
 		return (NULL);
 	i = 0;

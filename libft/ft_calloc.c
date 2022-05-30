@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:13:43 by esali             #+#    #+#             */
-/*   Updated: 2022/03/02 14:30:54 by esali            ###   ########.fr       */
+/*   Updated: 2022/05/30 17:20:13 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ret;
-	int		i;
+	void	*ptr;
 
-	ret = (char *) malloc(count * size * sizeof(char));
-	if (ret == NULL)
+	ptr = (void *) malloc(count * size);
+	if (ptr == NULL)
 		return (NULL);
-	i = 0;
-	while (i < (int) (count * size))
-	{
-		ret[i] = '0';
-		i++;
-	}
-	return (ret);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 11:40:33 by esali             #+#    #+#             */
-/*   Updated: 2022/02/17 17:53:02 by esali            ###   ########.fr       */
+/*   Updated: 2022/03/08 15:34:29 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*s1_help;
-	char	*s2_help;
+	int				i;
+	unsigned char	*s1_help;
+	unsigned char	*s2_help;
 
-	s1_help = (char *) s1;
-	s2_help = (char *) s2;
-	if ((int) ft_strlen(s1) == 0 && (int) ft_strlen(s2) == 0)
-		return (0);
+	s1_help = (unsigned char *)s1;
+	s2_help = (unsigned char *)s2;
 	i = 0;
 	while (i < (int) n)
 	{
 		if (s1_help[i] != s2_help[i])
-			return ((int)(s1_help[i] - s2_help[i]));
+		{
+			return (((unsigned char)s1_help[i] - (unsigned char)s2_help[i]));
+		}
 		i++;
 	}
 	return (0);

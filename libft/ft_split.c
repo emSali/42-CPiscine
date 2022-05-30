@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:04:07 by esali             #+#    #+#             */
-/*   Updated: 2022/03/02 22:56:07 by esali            ###   ########.fr       */
+/*   Updated: 2022/05/30 17:55:33 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < numsplit(s, c))
 	{
-		split[i] = (char **) malloc(sizeof(char) * (ft_strlen(s) + 1));
+		split[i] = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
 		if (split[i] == NULL)
 			return (NULL);
 		j = 0;
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 				break;
 		}
 		split[i][j] = '\0';
-		printf("i: %i\n", i);
+		//printf("i: %i\n", i);
 		i++;
 	}
 	split[i] = NULL;
